@@ -1,8 +1,4 @@
-body {
-    background: #FFFFFF;;
-}
-
-.nav-link {
+.nav-lnk {
     padding: 0 !important;
     margin: 8px;
 }
@@ -44,11 +40,6 @@ body.loaded .navbar::after {
 
 .custom-underline:hover::after {
     width: 100%;
-}
-
-.about-img {
-    max-width: 150px;
-    width: 11%;
 }
 
 .link-footer {
@@ -136,7 +127,7 @@ body.loaded .navbar::after {
 
 .custom-p-small {
     font-family: Montserrat;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .custom-p-logo {
@@ -147,7 +138,7 @@ body.loaded .navbar::after {
 
 .custom-p {
     font-family: Montserrat;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 1.35rem;
     line-height: normal;
 }
@@ -226,5 +217,71 @@ body.loaded .navbar::after {
     text-decoration: none;
     color: black;
     position: relative;
+}
+
+/* Animations */
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animated-text {
+    opacity: 0;
+}
+
+.animate {
+    animation: slideInFromBottom 1s ease-out forwards;
+}
+
+@keyframes slowShowUp {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated-image {
+    opacity: 0;
+}
+
+.animate-image {
+    animation: slowShowUp 1.5s ease-out forwards;
+}
+
+.about-img {
+    opacity: 0;
+    max-width: 150px;
+    width: 1%;
+}
+
+.about-animate-grow {
+    animation: growImg 2s forwards;
+}
+
+@keyframes growImg {
+    0% {
+        width: 1%;
+    }
+    100% {
+        width: 9%;
+    }
+}
+
+.img-placeholder {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
 }
 
