@@ -45,7 +45,7 @@
                     </div>
                     <div class="col-md-2 order-3 order-md-2 text-center">
                         <a class="navbar-brand me-0" href="http://">
-                            <img class="img-fluid animate-image" src="img/logo.png" width="70" height="auto"
+                            <img class="img-fluid animate-image no-shadow" src="img/logo.png" width="70" height="auto"
                                 alt="Design Kuhn">
                         </a>
                     </div>
@@ -72,6 +72,15 @@
     </nav>
     <section id="cover">
         <div class="container mt-5 pt-5">
+            <!-- <div class="row">
+                <div class="col-12 col-sm-6 mx-auto text-center mt-5">
+                    <div class="anim-container">
+                        <div class="text-container">
+                            <h2 class="custom-h2">Дизайн-студия Оксаны Кун с собственным ателье</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
             <div class="row">
                 <div class="col-12 col-sm-6 mx-auto text-center mt-5">
                     <h2 class="custom-h2 animated-text">Дизайн-студия Оксаны Кун с собственным ателье</h2>
@@ -85,8 +94,8 @@
                     <p class="custom-p">Разрабатываю уникальный стиль, который подчеркивает индивидуальность.</p>
                 </div>
                 <div class="col-9 col-sm-12 col-xl-3 order-3 order-xl-2 mt-5 mt-xl-0 mx-auto text-center">
-                    <div class="elliptical-link-container">
-                        <div class="ellipse ellipse-big d-none d-sm-block"></div>
+                    <div class="elliptical-link-container elliptical-link-container-big">
+                        <div class="ellipse ellipse-big"></div>
                         <img class="rotate-15 img-fluid elliptical-link" style="width: 100%;" src="img/cover.jpg"
                             alt="Дизайн-студия">
                     </div>
@@ -272,10 +281,14 @@
         <div class="container mt-5 mb-5">
             <div class="row justify-content-md-center">
                 <div class="col-7 col-lg-4 mx-auto text-center d-flex align-items-center justify-content-center mt-2">
-                    <img class="rotate-15 img-fluid" src="img/me.png" alt="Дизайн-студия">
+                    <div class="elliptical-link-container elliptical-link-container-big">
+                        <div class="ellipse ellipse-big"></div>
+                        <img class="rotate-15 img-fluid elliptical-link" style="width: 100%;" src="img/me.png"
+                            alt="Дизайн-студия">
+                    </div>
                 </div>
                 <div class="col-11 col-md-7 col-lg-4 mx-auto mt-5 text-center text-lg-start">
-                    <h2 class="custom-h2">Более 10 лет опыта</h2>
+                    <h2 class="custom-h2-small">Более 10 лет опыта</h2>
                     <p class="custom-p-small">Счастлива, что имею возможность находиться
                         в маленьком городке Бад Дрибург в земле Северный Рейн-Вестфалия.</p>
                     <p class="custom-p-small">Больше десяти лет работаю дизайнером одежды, также создаю домашний уют
@@ -334,16 +347,19 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <img src="img/portfolio/01.png" style="width: 100%; max-width: 400px;" class="img-fluid" alt="">
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 pt-5 pt-md-0 text-end text-lg-start align-self-center">
-                    <img src="img/portfolio/02.png" style="width: 100%; max-width: 250px;" class="img-fluid" alt="">
+                <div
+                    class="col-12 col-md-6 col-lg-3 pt-5 pt-md-0 text-end text-lg-start align-self-center parallax-portfolio-container">
+                    <img src="img/portfolio/02.png" style="width: 100%; max-width: 250px;"
+                        class="img-fluid parallax-portfolio" alt="">
                 </div>
                 <div class="col-12 col-lg-6 align-self-end text-end pt-5">
                     <img src="img/portfolio/03.png" style="width: 100%; max-width: 100%;" class="img-fluid" alt="">
                 </div>
             </div>
             <div class="row mt-0 mt-md-5 mb-5">
-                <div class="col-12 col-md-6 col-lg-2 align-self-center mt-5">
-                    <img src="img/portfolio/04.png" style="width: 100%; max-width: 300px;" class="img-fluid" alt="">
+                <div class="col-12 col-md-6 col-lg-2 align-self-center mt-5 parallax-portfolio-container">
+                    <img src="img/portfolio/04.png" style="width: 100%; max-width: 300px;"
+                        class="img-fluid parallax-portfolio" alt="">
                 </div>
                 <div
                     class="col-12 col-md-6 col-lg-4 text-end text-md-start align-items-start ps-4 pt-0 pt-md-4 pb-5 pb-md-4 pe-0 pe-md-3 mt-5">
@@ -358,8 +374,10 @@
                             stroke="#2C2C2C"></path>
                     </svg>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 order-lg-4 align-self-end text-start text-lg-end mb-5 mb-md-0">
-                    <img src="img/portfolio/06.png" style="width: 100%; max-width: 350px;" class="img-fluid" alt="">
+                <div
+                    class="col-12 col-md-6 col-lg-3 order-lg-4 align-self-end text-start text-lg-end mb-5 mb-md-0 parallax-portfolio-container">
+                    <img src="img/portfolio/06.png" style="width: 100%; max-width: 350px;"
+                        class="img-fluid parallax-portfolio" alt="">
                 </div>
             </div>
         </div>
@@ -388,8 +406,8 @@
                 </div>
             </div>
         </div>
-        <img src="img/bg.jpg" alt="" class="img-fluid" style="max-width: 100%; width: 100%;">
     </section>
+    <div class="parallax-bg"></div>
     <section id="instagram">
         <div class="container">
             <div class="row">
@@ -406,14 +424,24 @@
         <div class="container mb-5 mt-5">
             <div class="row">
                 <div class="col-md-6 text-center mt-5">
-                    <img src="img/ig-01.jpg" class="rotate-15 pb-5" alt="">
-                    <p><a class="custom-p fs-3 link-dark link-underline-dark custom-h2 link-underline-opacity-1 me-2"
+                    <div class="elliptical-link-container elliptical-link-container-big">
+                        <div class="ellipse ellipse-big"></div>
+                        <img class="rotate-15 img-fluid elliptical-link" style="width: 100%;" src="img/ig-01.jpg"
+                            alt="Дизайн-студия">
+                    </div>
+                    <p class="pt-5"><a
+                            class="custom-p fs-3 link-dark link-underline-dark custom-h2 link-underline-opacity-1 me-2"
                             href="http://">@designkuhn</a></p>
                     <p class="custom-p fs-5">Здесь про пошив <br> одежды и моду</p>
                 </div>
                 <div class="col-md-6 text-center mt-5">
-                    <img src="img/ig-02.jpg" class="rotate-15 pb-5" alt="">
-                    <p><a class="custom-p fs-3 link-dark link-underline-dark custom-h2 link-underline-opacity-1 me-2"
+                    <div class="elliptical-link-container elliptical-link-container-big">
+                        <div class="ellipse ellipse-big"></div>
+                        <img class="rotate-15 img-fluid elliptical-link" style="width: 100%;" src="img/ig-02.jpg"
+                            alt="Дизайн-студия">
+                    </div>
+                    <p class="pt-5"><a
+                            class="custom-p fs-3 link-dark link-underline-dark custom-h2 link-underline-opacity-1 me-2"
                             href="http://">@homedesignkuhn</a></p>
                     <p class="custom-p fs-5">Über Textilien für <br> Ihr Haus und Deko</p>
                 </div>
@@ -456,19 +484,23 @@
                     <form class="custom-form" action="">
                         <div class="mb-3">
                             <label for="inputName" class="form-label custom-p-small custom-bold">Name</label>
-                            <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp">
+                            <input type="text" class="form-control custom-input" id="inputName"
+                                aria-describedby="nameHelp">
                         </div>
                         <div class="mb-3">
                             <label for="inputEmail" class="form-label custom-p-small custom-bold">Email address</label>
-                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                            <input type="email" class="form-control custom-input" id="inputEmail"
+                                aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="inputTel" class="form-label custom-p-small custom-bold">Telefon</label>
-                            <input type="text" class="form-control" id="inputTel" aria-describedby="telHelp">
+                            <input type="text" class="form-control custom-input" id="inputTel"
+                                aria-describedby="telHelp">
                         </div>
                         <div class="mb-3">
                             <label for="inputKomm" class="form-label custom-p-small custom-bold">Kommentare</label>
-                            <input type="text" class="form-control" id="inputKomm" aria-describedby="kommHelp">
+                            <input type="text" class="form-control custom-input" id="inputKomm"
+                                aria-describedby="kommHelp">
                         </div>
                         <div class="text-center">
                             <div class="elliptical-link-container text-center mt-5">
@@ -491,7 +523,7 @@
                     <div class="container">
                         <div class="d-flex justify-content-center justify-content-md-start">
                             <div>
-                                <img src="img/logo.png" style="width: 100px;" alt="Oksana Kuhn">
+                                <img src="img/logo.png" class="no-shadow" style="width: 100px;" alt="Oksana Kuhn">
                             </div>
                             <div class="flex-grow-0 flex-grow-md-1 pt-3 text-start">
                                 <div>
