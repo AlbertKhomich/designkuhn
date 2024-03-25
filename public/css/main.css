@@ -1,9 +1,17 @@
-/* html {
-    scroll-behavior: smooth !important;
-} */
+h1, h2, h3 {
+    font-family: MakLight;
+}
+
+p, a {
+    font-family: Montserrat;
+}
 
 img {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    margin: auto;
 }
 
 .no-shadow {
@@ -74,6 +82,26 @@ body.loaded .navbar::after {
 
 .custom-mb {
     margin-bottom: 180px;
+}
+
+.custom-mb-horeca {
+    margin-bottom: 0px;
+}
+
+@media (max-width: 1200px) {
+    .custom-mb-horeca {
+        margin-bottom: 140px;
+    }
+}
+
+.mb-myself {
+    margin-bottom: 180px;
+}
+
+@media (max-width: 1200px) {
+    .mb-myself {
+        margin-bottom: 60px;
+    }
 }
 
 .custom-mt {
@@ -154,7 +182,6 @@ body.loaded .navbar::after {
 }
 
 .custom-p {
-    font-family: Montserrat;
     font-weight: 300;
     font-size: 1.2rem;
     line-height: normal;
@@ -172,6 +199,18 @@ body.loaded .navbar::after {
     }
 }
 
+.custom-p-big {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+@media (max-width: 992px) {
+    .custom-p-big {
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+}
+
 .custom-h2 {
     font-family: MakLight;
     font-size: 3rem;
@@ -179,12 +218,15 @@ body.loaded .navbar::after {
 
 @media (max-width: 1200px) {
     .custom-h2 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 }
 
-.custom-h2-small {
-    font-family: MakLight;
+@media (max-width: 1200px) {
+    .custom-h2-small {
+        font-size: 1.6rem;
+        font-weight: 100;
+    }
 }
 
 .rotate-15 {
@@ -236,6 +278,17 @@ body.loaded .navbar::after {
     transition: background-color 0.5s ease;
 }
 
+.ellipse-horeca {
+    width: 324px;
+    height: 140.4px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.ellipse-arrow {
+    width: 162px;
+    height: 70.2px;
+}
+
 @media (max-width: 820px) {
     .ellipse {
         width: 250px;
@@ -259,6 +312,10 @@ body.loaded .navbar::after {
     text-decoration: none;
     color: black;
     position: relative;
+}
+
+.ellipse-btn {
+    cursor: pointer;
 }
 
 /* Animations */

@@ -1,5 +1,7 @@
 "use sctrict";
 
+const contactForm = document.getElementById("contactForm");
+
 document.body.classList.add("loaded");
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -96,6 +98,11 @@ document.addEventListener("DOMContentLoaded", function () {
       clearEllipse(ellipseBtn, ellipseLink);
     });
 
+    ellipseBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = "#contact";
+    });
+
     ellipseLink.addEventListener("mouseover", function () {
       fillEllipse(ellipseBtn, ellipseLink);
     });
@@ -188,3 +195,15 @@ function isInViewport(elem) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
+
+document.getElementById("submitFormLink").addEventListener("click", (event) => {
+  event.preventDefault();
+
+  contactForm.submit();
+});
+
+document.getElementById("submitFormBtn").addEventListener("click", (event) => {
+  event.preventDefault();
+
+  contactForm.submit();
+});
