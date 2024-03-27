@@ -2,6 +2,11 @@ h1, h2, h3 {
     font-family: MakLight;
 }
 
+svg {
+    vertical-align: middle;
+    margin-top: -10px;
+}
+
 p, a {
     font-family: Montserrat;
 }
@@ -10,8 +15,22 @@ img {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+.custom-btn-close {
+    --bs-btn-close-bg: unset !important;
+    --bs-btn-close-focus-shadow: unset !important;
+}
+
 section {
     margin: auto;
+}
+
+.carousel, .carousel-item {
+    height: 270px;
+}
+
+.carousel-caption-custom {
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .no-shadow {
@@ -133,6 +152,21 @@ body.loaded .navbar::after {
 
 }
 
+.custom-form-feedback .form-control{
+    border: 0.5px solid black;
+    border-radius: 0.5;
+}
+
+.custom-form-feedback .form-control:focus{
+    box-shadow: none;
+    border: 2px solid black;
+
+}
+
+.modal-footer .btn-block {
+    width: 100%;
+}
+  
 .custom-container {
     padding: 0 25px;
     margin: auto;
@@ -193,7 +227,7 @@ body.loaded .navbar::after {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 590px) {
     .custom-p {
         font-size: 1rem;
     }
@@ -407,6 +441,15 @@ body.loaded .navbar::after {
     width: auto;
     height: auto;
     background-color: transparent;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.img-fluid-big {
+    width: 75%;
 }
 
 .animated-title {

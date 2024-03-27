@@ -6,7 +6,9 @@
                 <div class="container">
                     <div class="d-flex justify-content-center justify-content-md-start">
                         <div>
-                            <img src="img/logo.png" class="no-shadow" style="width: 100px;" alt="Oksana Kuhn">
+                            <a href="/">
+                                <img src="img/logo.png" class="no-shadow" style="width: 100px;" alt="Oksana Kuhn">
+                            </a>
                         </div>
                         <div class="flex-grow-0 flex-grow-md-1 pt-3 text-start">
                             <div>
@@ -45,7 +47,7 @@
                         mich</a><br>
                 </div>
                 <div class="link-footer">
-                    <a href="#portfolio"
+                    <a href="<% if (!portfolio) { %>/#portfolio<% } else { %>#portfolio<% } %>"
                         class="custom-p-small fs-6 link-dark link-underline link-underline-opacity-0 link-footer custom-underline">Portfolio</a><br>
                 </div>
                 <div class="link-footer">
@@ -57,12 +59,12 @@
             <div class="col-12 d-block d-md-none text-center mb-4 order-3">
                 <a href="#top"
                     class="custom-p-small link-dark link-underline link-underline-opacity-0 me-3 custom-underline">Nach
-                    oben</a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="31" viewBox="0 0 21 31" fill="none">
-                    <path
-                        d="M10.5 26L10.5 5M10.5 5C10.5 11.8571 7.6875 12.8367 3 12.8367M10.5 5C10.5 11.8571 13.3125 12.8367 18 12.8367"
-                        stroke="#5F5F5F"></path>
-                </svg>
+                    oben
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="31" viewBox="0 0 21 31" fill="none">
+                        <path
+                            d="M10.5 26L10.5 5M10.5 5C10.5 11.8571 7.6875 12.8367 3 12.8367M10.5 5C10.5 11.8571 13.3125 12.8367 18 12.8367"
+                            stroke="#5F5F5F"></path>
+                    </svg></a>
             </div>
         </div>
         <div class="row mt-5 justify-content-center">
@@ -74,12 +76,12 @@
             <div class="col d-none d-md-block">
                 <a href="#top"
                     class="custom-p-small link-dark link-underline link-underline-opacity-0 me-3 custom-underline">Nach
-                    oben</a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="31" viewBox="0 0 21 31" fill="none">
-                    <path
-                        d="M10.5 26L10.5 5M10.5 5C10.5 11.8571 7.6875 12.8367 3 12.8367M10.5 5C10.5 11.8571 13.3125 12.8367 18 12.8367"
-                        stroke="#5F5F5F"></path>
-                </svg>
+                    oben
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="31" viewBox="0 0 21 31" fill="none">
+                        <path
+                            d="M10.5 26L10.5 5M10.5 5C10.5 11.8571 7.6875 12.8367 3 12.8367M10.5 5C10.5 11.8571 13.3125 12.8367 18 12.8367"
+                            stroke="#5F5F5F"></path>
+                    </svg></a>
             </div>
         </div>
     </div>
@@ -88,6 +90,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 <script src="/js/main.js"></script>
+<script src="/js/forms.js"></script>
 </body>
 
 </html>

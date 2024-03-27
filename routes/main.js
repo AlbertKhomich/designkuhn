@@ -1,5 +1,5 @@
 const express = require("express");
-const { body, validationResult } = require("express-validator");
+const { body, check } = require("express-validator");
 
 const {
   getIndex,
@@ -9,6 +9,7 @@ const {
   getKontakte,
   getMyself,
   postSendEmail,
+  postSendFeedback,
 } = require("../controllers/main");
 
 const router = express.Router();
@@ -27,7 +28,7 @@ router.post(
       .trim()
       .escape()
       .notEmpty()
-      .withMessage("Name is required")
+      .withMessage("Name ist erforderlich")
       .customSanitizer((value) => {
         return value
           .toLowerCase()
@@ -35,12 +36,38 @@ router.post(
       }),
     body("inputEmail")
       .isEmail()
-      .withMessage("Invalid email address")
+      .withMessage("Ungültige E-Mail-Adresse")
       .normalizeEmail(),
-    body("inputTel").isNumeric().withMessage("Invalid number"),
+    body("inputTel").isNumeric().withMessage("Ungültige Nummer"),
     body("inputKomm").trim().escape(),
   ],
   postSendEmail
+);
+
+router.post(
+  "/send-feedback",
+  [
+    body("inputNameFeedback")
+      .trim()
+      .escape()
+      .notEmpty()
+      .withMessage("Name ist erforderlich")
+      .customSanitizer((value) => {
+        return value
+          .toLowerCase()
+          .replace(/\b\w/g, (char) => char.toUpperCase());
+      }),
+    body("inputLinkFeedback")
+      .if((value, { req }) => req.body.inputLinkFeedback !== "")
+      .isURL()
+      .withMessage("Ungültige URL-Adresse"),
+    body("inputFeedback")
+      .trim()
+      .escape()
+      .notEmpty()
+      .withMessage("Feedback ist erforderlich"),
+  ],
+  postSendFeedback
 );
 
 module.exports = router;

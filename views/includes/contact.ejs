@@ -39,60 +39,42 @@
                     <br>
                     BELIEBIGE FRAGEN
                 </h3>
-                <% if (successMessage) { %>
-                    <div id="successAlert" class="alert alert-success" role="alert">
-                        <%= successMessage %>
+                <div id="alertContact"></div>
+                <form class="custom-form" action="/send-email" method="POST" id="contactForm">
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label custom-p-small custom-bold">Name <span
+                                class="text-danger">*</span></label>
+                        <input type="text" class="form-control custom-input" id="inputName" name="inputName"
+                            aria-describedby="nameHelp" required>
                     </div>
-                    <% } %>
-                        <% if (errors && errors.length> 0) { %>
-                            <div class="alert alert-danger" role="alert">
-                                <ul>
-                                    <% errors.forEach(error=> { %>
-                                        <li>
-                                            <%= error.msg %>
-                                        </li>
-                                        <% }); %>
-                                </ul>
-                            </div>
-                            <% } %>
-                                <form class="custom-form" action="/send-email" method="POST" id="contactForm">
-                                    <div class="mb-3">
-                                        <label for="inputName" class="form-label custom-p-small custom-bold">Name <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control custom-input" id="inputName"
-                                            name="inputName" value="<%= inputName || '' %>" aria-describedby="nameHelp"
-                                            required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputEmail" class="form-label custom-p-small custom-bold">Email
-                                            address <span class="text-danger">*</span></label>
-                                        <input type="email" class="form-control custom-input" id="inputEmail"
-                                            name="inputEmail" value="<%= inputEmail || '' %>"
-                                            aria-describedby="emailHelp" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputTel" class="form-label custom-p-small custom-bold">Telefon
-                                            <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control custom-input" id="inputTel"
-                                            name="inputTel" value="<%= inputTel || '' %>" aria-describedby="telHelp"
-                                            required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputKomm"
-                                            class="form-label custom-p-small custom-bold">Kommentare</label>
-                                        <textarea type="text" class="form-control custom-input" id="inputKomm"
-                                            name="inputKomm" rows="1"
-                                            aria-describedby="kommHelp"><%= inputKomm || '' %></textarea>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="elliptical-link-container text-center mt-5">
-                                            <div class="ellipse ellipse-second"></div>
-                                            <div class="ellipse ellipse-btn" id="submitFormBtn"></div>
-                                            <a class="custom-p elliptical-link" id="submitFormLink"
-                                                href="http://"><b>Senden</b></a>
-                                        </div>
-                                    </div>
-                                </form>
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label custom-p-small custom-bold">Email
+                            address <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control custom-input" id="inputEmail" name="inputEmail" v
+                            aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputTel" class="form-label custom-p-small custom-bold">Telefon
+                            <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control custom-input" id="inputTel" name="inputTel"
+                            aria-describedby="telHelp" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputKomm" class="form-label custom-p-small custom-bold">Kommentare</label>
+                        <textarea type="text" class="form-control custom-input" id="inputKomm" name="inputKomm" rows="1"
+                            aria-describedby="kommHelp"></textarea>
+                    </div>
+                    <div class="text-center mt-5">
+                        <span class="spinner-border text-dark d-none" id="spinnerContact" aria-hidden="true"></span>
+                    </div>
+                    <div class="text-center" id="ellipseContactSend">
+                        <div class="elliptical-link-container text-center mt-5">
+                            <div class="ellipse ellipse-second"></div>
+                            <div class="ellipse ellipse-btn" id="submitFormBtn"></div>
+                            <a class="custom-p elliptical-link" id="submitFormLink" href="http://"><b>Senden</b></a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

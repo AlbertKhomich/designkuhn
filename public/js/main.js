@@ -1,9 +1,5 @@
 "use sctrict";
 
-const contactForm = document.getElementById("contactForm");
-
-document.body.classList.add("loaded");
-
 document.addEventListener("DOMContentLoaded", function () {
   const rotatingImages = document.querySelectorAll(".rotate-15");
 
@@ -120,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("loaded");
   animateAbout();
   animateElements();
 });
@@ -195,15 +192,3 @@ function isInViewport(elem) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
-
-document.getElementById("submitFormLink").addEventListener("click", (event) => {
-  event.preventDefault();
-
-  contactForm.submit();
-});
-
-document.getElementById("submitFormBtn").addEventListener("click", (event) => {
-  event.preventDefault();
-
-  contactForm.submit();
-});
