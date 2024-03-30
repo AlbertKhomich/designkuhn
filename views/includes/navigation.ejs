@@ -8,20 +8,25 @@
             </svg>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <div class="row align-items-center">
+            <div class="row align-items-center caps text-nowrap">
                 <div class="col-md-5 order-1 text-center">
                     <ul class="navbar-nav justify-content-end">
                         <li class="nav-item d-inline-flex justify-content-center">
                             <a class="nav-link custom-p-small custom-underline animated-text" data-delay="0.3"
-                                href="/horeca">HORECA</a>
+                                href="/horeca">
+                                <%= translation.horeca %>
+                            </a>
                         </li>
                         <li class="nav-item d-inline-flex justify-content-center">
                             <a class="nav-link custom-p-small custom-underline animated-text" data-delay="0.1"
-                                href="/kleideranfertigung">KLEIDERANFERTINGUNG</a>
+                                href="/kleideranfertigung">
+                                <%= translation.kleideranfertigung %>
+                            </a>
                         </li>
                         <li class="nav-item d-inline-flex justify-content-center">
-                            <a class="nav-link custom-p-small custom-underline animated-text"
-                                href="/heimtextilien">HEIMTEXTILEN</a>
+                            <a class="nav-link custom-p-small custom-underline animated-text" href="/heimtextilien">
+                                <%= translation.heimtextilien %>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -39,12 +44,23 @@
                         </li>
                         <li class="nav-item d-inline-flex justify-content-center">
                             <a class="nav-link custom-p-small custom-underline animated-text" data-delay="0.1"
-                                href="/myself">UBER
-                                MICH</a>
+                                href="/myself">
+                                <%= translation.about %>
+                            </a>
                         </li>
                         <li class="nav-item d-inline-flex justify-content-center">
                             <a class="nav-link custom-p-small custom-underline animated-text" data-delay="0.3"
-                                href="/kontakte">KONTAKTE</a>
+                                href="/kontakte">
+                                <%= translation.kontakte %>
+                            </a>
+                        </li>
+                        <li class="nav-item d-inline-flex justify-content-center">
+                            <a class="nav-link custom-p-small custom-underline animated-text <%= (lang=='de'?'disabled-link':'') %>"
+                                data-delay="0.3" href="/set-de">DE</a>
+                        </li>
+                        <li class="nav-item d-inline-flex justify-content-center">
+                            <a class="nav-link custom-p-small custom-underline animated-text <%= (lang=='en'?'disabled-link':'') %>"
+                                data-delay="0.3" href="/set-en">EN</a>
                         </li>
                     </ul>
                 </div>

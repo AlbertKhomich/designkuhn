@@ -5,17 +5,10 @@ const { createTransporterSMTP } = require("../middleware/utils");
 
 exports.getIndex = (req, res, next) => {
   res.render("index", {
-    pageTitle:
-      "Designstudio und Atelier von Oksana Kuhn | Kleideranfertigung | Atelier | Design",
-    coverTitle: "Designstudio und Atelier von Oksana Kuhn",
+    coverTopic: req.i18n_texts.main,
     leftBlock: true,
-    leftText:
-      "Ich designe Kleiderstücke und Textilien für das Haus. Dekoriere Ihr Zuhause.",
-    rightText:
-      "Erarbeite einzigartiges Style, das Ihre Individualität unterstreicht.",
     rightBlock: true,
     buttonCover: true,
-    buttonText: "Anmeldung für<br>die Beratung",
     discount: true,
     coverImage: "img/cover.jpg",
     sectionTitleContact: true,
@@ -25,14 +18,11 @@ exports.getIndex = (req, res, next) => {
 
 exports.getHoreca = (req, res, next) => {
   res.render("horeca", {
+    coverTopic: req.i18n_texts.horecaTopic,
     pageTitle: "Uniformdesign. Uniform, Tischdecken, Sets-, Vorhängenäherei",
-    coverTitle: "HoReCa",
     leftBlock: false,
-    leftText: "",
     rightBlock: false,
-    rightText: "",
     buttonCover: true,
-    buttonText: "Anfrage stellen",
     discount: false,
     coverImage: "img/horeca.png",
     jobServ: "Was mache ich",
@@ -47,13 +37,11 @@ exports.getHoreca = (req, res, next) => {
 
 exports.getKleideranfertigung = (req, res, next) => {
   res.render("kleideranfertigung", {
+    coverTopic: req.i18n_texts.kleiderTopic,
     pageTitle:
       "Maßschneiderei in Bad Driburg [Vorhandene Stoffe ] [RABATT auf erste Bestellung]",
-    coverTitle: "Kleideranfertigung",
     leftBlock: true,
-    leftText: "Ich designe individuelle Kleiderstücke, die Ihre Figur betonnen",
     rightBlock: true,
-    rightText: "Ich erarbeite Schnittschablonen nach Ihren Maßen",
     buttonCover: true,
     buttonText: "Anmeldung für<br>die Beratung",
     discount: true,
@@ -72,13 +60,11 @@ exports.getKleideranfertigung = (req, res, next) => {
 
 exports.getHeimtextilien = (req, res, next) => {
   res.render("heimtextilien", {
+    coverTopic: req.i18n_texts.heimTopic,
     pageTitle:
       "Design und Nähen von Vorhänge, das Interieur Dekoration auf Bestellung",
-    coverTitle: "Textilien für Ihr Haus und Dekoration",
     leftBlock: true,
-    leftText: "Ich style Vorhänge, die perfekt zur Zimmerausstattung passen",
     rightBlock: true,
-    rightText: "Ich erarbeite Tagesdecken, Dekokissen und Bettwäsche",
     buttonCover: true,
     buttonText: "Anmeldung für<br>die Beratung",
     discount: true,
@@ -96,6 +82,7 @@ exports.getHeimtextilien = (req, res, next) => {
 
 exports.getMyself = (req, res, next) => {
   res.render("myself", {
+    coverTopic: req.i18n_texts.aboutTopic,
     pageTitle:
       "Über mich | Oksana Kuhn — professioneller Modedesignerin mit 10 Jahren Erfahrung",
     coverTitle: "Über mich",
@@ -145,12 +132,12 @@ exports.postSendEmail = (req, res, next) => {
       return console.log(error);
     }
     console.log("Feedback sent: %s", info.messageId);
-    res.json({ success: true });
+    res.json({ success: true, msg: req.i18n_texts.validation["success"] });
   });
 };
 
 exports.postSendFeedback = async (req, res, next) => {
-  const { inputNameFeedback, inputLinkFeedback, inputFeedback } = req.body;
+  const { feedbackName, feedbackLink, feedbackMessage } = req.body;
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
@@ -164,9 +151,9 @@ exports.postSendFeedback = async (req, res, next) => {
     to: "to@example.com",
     subject: "Feedback from website",
     text: `
-    Name: ${inputNameFeedback}
-    Link: ${inputLinkFeedback}
-    Feedback: ${inputFeedback}
+    Name: ${feedbackName}
+    Link: ${feedbackLink}
+    Feedback: ${feedbackMessage}
     `,
   };
 
@@ -175,6 +162,16 @@ exports.postSendFeedback = async (req, res, next) => {
       return console.log(error);
     }
     console.log("Feedback sent: %s", info.messageId);
-    res.json({ success: true });
+    res.json({ success: true, msg: req.i18n_texts.validation["success"] });
   });
+};
+
+exports.getSetEn = (req, res) => {
+  res.cookie("ulang", "en", { maxAge: 900000, httpOnly: true });
+  res.redirect("back");
+};
+
+exports.getSetDe = (req, res) => {
+  res.cookie("ulang", "de", { maxAge: 900000, httpOnly: true });
+  res.redirect("back");
 };

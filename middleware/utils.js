@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const rateLimit = require("express-rate-limit");
 
 exports.createTransporterSMTP = () => {
   let transporter = nodemailer.createTransport({
@@ -13,3 +14,15 @@ exports.createTransporterSMTP = () => {
 
   return transporter;
 };
+
+exports.limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 min
+  max: 1000,
+  handler: (req, res, next) => {
+    const error = new Error(
+      "Too many requests from this IP, please try again later."
+    );
+    error.status = 429;
+    next(error);
+  },
+});

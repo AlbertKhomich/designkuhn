@@ -15,6 +15,15 @@ img {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+.disabled-link {
+    pointer-events: none;
+    opacity: 0.4 !important;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
 .custom-btn-close {
     --bs-btn-close-bg: unset !important;
     --bs-btn-close-focus-shadow: unset !important;

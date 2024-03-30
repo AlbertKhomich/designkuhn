@@ -1,5 +1,5 @@
 const express = require("express");
-const { body, check } = require("express-validator");
+const { body } = require("express-validator");
 
 const {
   getIndex,
@@ -10,6 +10,8 @@ const {
   getMyself,
   postSendEmail,
   postSendFeedback,
+  getSetDe,
+  getSetEn,
 } = require("../controllers/main");
 
 const router = express.Router();
@@ -20,6 +22,8 @@ router.get("/kleideranfertigung", getKleideranfertigung);
 router.get("/heimtextilien", getHeimtextilien);
 router.get("/kontakte", getKontakte);
 router.get("/myself", getMyself);
+router.get("/set-de", getSetDe);
+router.get("/set-en", getSetEn);
 
 router.post(
   "/send-email",
@@ -28,7 +32,9 @@ router.post(
       .trim()
       .escape()
       .notEmpty()
-      .withMessage("Name ist erforderlich")
+      .withMessage((value, { req, location, path }) => {
+        return req.i18n_texts.validation["noName"];
+      })
       .customSanitizer((value) => {
         return value
           .toLowerCase()
@@ -36,9 +42,15 @@ router.post(
       }),
     body("inputEmail")
       .isEmail()
-      .withMessage("Ungültige E-Mail-Adresse")
+      .withMessage((value, { req, location, path }) => {
+        return req.i18n_texts.validation["wrongEmail"];
+      })
       .normalizeEmail(),
-    body("inputTel").isNumeric().withMessage("Ungültige Nummer"),
+    body("inputTel")
+      .isNumeric()
+      .withMessage((value, { req, location, path }) => {
+        return req.i18n_texts.validation["wrongTel"];
+      }),
     body("inputKomm").trim().escape(),
   ],
   postSendEmail
@@ -47,25 +59,31 @@ router.post(
 router.post(
   "/send-feedback",
   [
-    body("inputNameFeedback")
+    body("feedbackName")
       .trim()
       .escape()
       .notEmpty()
-      .withMessage("Name ist erforderlich")
+      .withMessage((value, { req, location, path }) => {
+        return req.i18n_texts.validation["noName"];
+      })
       .customSanitizer((value) => {
         return value
           .toLowerCase()
           .replace(/\b\w/g, (char) => char.toUpperCase());
       }),
-    body("inputLinkFeedback")
-      .if((value, { req }) => req.body.inputLinkFeedback !== "")
+    body("feedbackLink")
+      .if((value, { req }) => req.body.feedbackLink !== "")
       .isURL()
-      .withMessage("Ungültige URL-Adresse"),
-    body("inputFeedback")
+      .withMessage((value, { req, location, path }) => {
+        return req.i18n_texts.validation["wrongUrl"];
+      }),
+    body("feedbackMessage")
       .trim()
       .escape()
       .notEmpty()
-      .withMessage("Feedback ist erforderlich"),
+      .withMessage((value, { req, location, path }) => {
+        return req.i18n_texts.validation["noFeedback"];
+      }),
   ],
   postSendFeedback
 );

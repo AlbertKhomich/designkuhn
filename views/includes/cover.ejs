@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-12 col-sm-6 mx-auto text-center mt-5">
                 <h2 class="custom-h2 animated-text">
-                    <%= coverTitle %>
+                    <%= coverTopic.coverTitle %>
                 </h2>
             </div>
         </div>
@@ -20,14 +20,14 @@
             <% if (leftBlock) { %>
                 <div class="col-8 col-sm-6 col-xl-3 order-1 mb-3 ms-3 mb-sm-0 ms-sm-0 mx-auto text-center">
                     <p class="custom-p">
-                        <%= leftText %>
+                        <%= coverTopic.leftText %>
                     </p>
                 </div>
                 <% } %>
                     <% if (rightBlock) { %>
                         <div class="col-8 col-sm-6 col-xl-3 order-2 me-3 me-sm-0 order-xl-3 mx-auto text-center">
                             <p class="custom-p">
-                                <%= rightText %>
+                                <%= coverTopic.rightText %>
                             </p>
                         </div>
                         <% } %>
@@ -46,7 +46,7 @@
                         <div class="ellipse ellipse-second"></div>
                         <div class="ellipse ellipse-btn"></div>
                         <a class="custom-p elliptical-link" href="#contact">
-                            <%- buttonText %>
+                            <%- translation.buttonText %>
                         </a>
                     </div>
                 </div>
@@ -55,7 +55,9 @@
                 <% if(discount) { %>
                     <div class="row">
                         <div class="col mx-auto text-center mt-5">
-                            <p class="custom-p-small">Auf erste Bestellung 5% Rabatt</p>
+                            <p class="custom-p-small">
+                                <%= translation.rabbat %>
+                            </p>
                         </div>
                     </div>
                     <% } %>

@@ -1,33 +1,35 @@
 const express = require("express");
-const rateLimit = require("express-rate-limit");
+const cookieParser = require("cookie-parser");
+const i18n = require("i18n-express");
+const path = require("path");
 const bodyParser = require("body-parser");
 
 const mainRoutes = require("./routes/main");
 const { handle404, errorHandle } = require("./middleware/errors");
+const { limiter } = require("./middleware/utils");
 
 const app = express();
 
-app.use(express.json());
+app.use(cookieParser());
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 min
-  max: 1000,
-  handler: (req, res, next) => {
-    const error = new Error(
-      "Too many requests from this IP, please try again later."
-    );
-    error.status = 429;
-    next(error);
-  },
-});
+app.use(express.json());
 
 app.use(limiter);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
+
+app.use(
+  i18n({
+    translationsPath: path.join(__dirname, "i18n"),
+    siteLangs: ["de", "en"],
+    textsVarName: "translation",
+    defaultLang: "de",
+  })
+);
 
 app.use(mainRoutes);
 

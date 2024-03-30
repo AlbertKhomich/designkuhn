@@ -1,5 +1,6 @@
 <%- include('./includes/head.ejs') %>
     </head>
+    <!-- TODO: alt localisation-->
 
     <body>
         <%- include('./includes/navigation.ejs') %>
@@ -14,13 +15,17 @@
                         <div class="row">
                             <div class="col-md-12 mx-auto text-center mt-5">
                                 <a class="display-1 custom-h2 link-dark link-underline link-underline-opacity-0 custom-underline animated-text"
-                                    href="/heimtextilien">Heimtextilien</a>
+                                    href="/heimtextilien">
+                                    <%= translation.heimtextilien %>
+                                </a>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 mx-auto text-center mt-5">
                                 <a class="display-1 custom-h2 link-dark link-underline link-underline-opacity-0 custom-underline animated-text"
-                                    href="/kleideranfertigung">Kleidung</a>
+                                    href="/kleideranfertigung">
+                                    <%= translation.kleidung %>
+                                </a>
                             </div>
                         </div>
                         <div class="row">
@@ -35,12 +40,16 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 mx-auto text-center mt-5">
-                                <p class="custom-p-small fs-9 mt-5">VORTEILE</p>
+                                <p class="custom-p-small fs-9 mt-5 caps">
+                                    <%= translation.vorteile %>
+                                </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mx-auto text-center mt-5">
-                                <h2 class="custom-h2 animated-text">Warum lohnt es, sich an mich zu wenden?</h2>
+                                <h2 class="custom-h2 animated-text">
+                                    <%= translation.vorteileTitle %>
+                                </h2>
                             </div>
                         </div>
                     </div>
@@ -49,7 +58,9 @@
                             <div class="row justify-content-md-center animated-text">
                                 <div
                                     class="col-md-4 mx-auto text-center d-flex align-items-center justify-content-center mt-5">
-                                    <h2>ICH BIN PROFI</h2>
+                                    <h2 class="caps">
+                                        <%= translation.vor1Title %>
+                                    </h2>
                                 </div>
                                 <div
                                     class="col-md-4 mx-auto text-center d-none d-md-flex align-items-center justify-content-center mt-5">
@@ -61,11 +72,11 @@
                                     </svg>
                                 </div>
                                 <div class="col-md-4 mx-auto text-center text-md-start mt-5">
-                                    <h3>MEHR ALS 10 JAHRE ERFAHRUNG</h3>
-                                    <p class="custom-p-small">Dank meiner Erfahrung kann ich die Aufgaben aller
-                                        Schwierigkeitsgrade lösen: von der einfachen
-                                        Kleiderausbesserung bis zur aufwändigen
-                                        Kleidererneuerung.
+                                    <h3 class="caps">
+                                        <%= translation.vor1Desc %>
+                                    </h3>
+                                    <p class="custom-p-small">
+                                        <%= translation.vor1Text %>
                                     </p>
                                 </div>
                             </div>
@@ -74,7 +85,7 @@
                             <div class="row justify-content-md-center animated-text">
                                 <div
                                     class="col-md-4 mx-auto text-center d-flex align-items-center justify-content-center mt-5">
-                                    <h2>ICH SPARE <br> IHRE ZEIT</h2>
+                                    <h2 class="caps"><%- translation.vor2Title %></h2>
                                 </div>
                                 <div
                                     class="col-md-4 mx-auto text-center d-none d-md-flex align-items-center justify-content-center mt-5">
@@ -86,10 +97,11 @@
                                     </svg>
                                 </div>
                                 <div class="col-md-4 mx-auto text-center text-md-start mt-5">
-                                    <h3>VORHANDENE STOFFE</h3>
-                                    <p class="custom-p-small">In meinem Atelier stehen mehr als 50 verschiedene
-                                        Stoffarten zur Verfügung. Daraus kann man einen Stoff auswählen, der perfekt zu
-                                        Ihrem Kleiderstück passt. So sparen Sie Ihre Zeit beim Suchen.
+                                    <h3 class="caps">
+                                        <%= translation.vor2Desc %>
+                                    </h3>
+                                    <p class="custom-p-small">
+                                        <%= translation.vor2Text %>
                                     </p>
                                 </div>
                             </div>
@@ -98,7 +110,7 @@
                             <div class="row justify-content-md-center animated-text">
                                 <div
                                     class="col-md-4 mx-auto text-center d-flex align-items-center justify-content-center mt-5">
-                                    <h2>ICH MACHE <br> ES SCHNELL</h2>
+                                    <h2 class="caps"><%- translation.vor3Title %></h2>
                                 </div>
                                 <div
                                     class="col-md-4 mx-auto text-center d-none d-md-flex align-items-center justify-content-center mt-5">
@@ -110,10 +122,11 @@
                                     </svg>
                                 </div>
                                 <div class="col-md-4 mx-auto text-center text-md-start mt-5">
-                                    <h3>SCHNELL ANFERTIGUNG</h3>
-                                    <p class="custom-p-small">Haben Sie Eile bei Ihrer Bestellung ist es kein Problem
-                                        für mich. Ich kann es in ein paar Stunden oder ein paar Tage schaffen, je nach
-                                        Schwierigkeitsgrad ihrer Anfrage.
+                                    <h3 class="caps">
+                                        <%= translation.vor3Desc %>
+                                    </h3>
+                                    <p class="custom-p-small">
+                                        <%= translation.vor3Text %>
                                     </p>
                                 </div>
                             </div>
@@ -122,7 +135,7 @@
                             <div class="row justify-content-md-center animated-text">
                                 <div
                                     class="col-md-4 mx-auto text-center d-flex align-items-center justify-content-center mt-5">
-                                    <h2>MEIN EIGENES <br> DESIGNSTUDIO</h2>
+                                    <h2 class="caps"><%- translation.vor4Title %></h2>
                                 </div>
                                 <div
                                     class="col-md-4 mx-auto text-center d-none d-md-flex align-items-center justify-content-center mt-5">
@@ -134,10 +147,11 @@
                                     </svg>
                                 </div>
                                 <div class="col-md-4 mx-auto text-center text-md-start mt-5">
-                                    <h3>EIGENHERSTELLUNG</h3>
-                                    <p class="custom-p-small">Alle Bestellungen werden individuell in meinem Atelier
-                                        fertiggestellt. Ich bin persönlich für die Qualität des Nähens und die
-                                        Schnittschablone verantwortlich.
+                                    <h3 class="caps">
+                                        <%= translation.vor4Desc %>
+                                    </h3>
+                                    <p class="custom-p-small">
+                                        <%= translation.vor4Text %>
                                     </p>
                                 </div>
                             </div>
@@ -146,7 +160,7 @@
                             <div class="row justify-content-md-center animated-text">
                                 <div
                                     class="col-md-4 mx-auto text-center d-flex align-items-center justify-content-center mt-5">
-                                    <h2>KUNDENSERVICE ONLINE</h2>
+                                    <h2 class="caps"><%- translation.vor5Title %></h2>
                                 </div>
                                 <div
                                     class="col-md-4 mx-auto text-center d-none d-md-flex align-items-center justify-content-center mt-5">
@@ -158,10 +172,11 @@
                                     </svg>
                                 </div>
                                 <div class="col-md-4 mx-auto text-center text-md-start mt-5">
-                                    <h3>AUSRECHNUNG PER FOTO</h3>
-                                    <p class="custom-p-small">Ich kann den Stoff per Foto für Ihre Bestellung aussuchen
-                                        und den Kostenvoranschlag machen.
-                                        So sparen wir Ihre Zeit.
+                                    <h3 class="caps">
+                                        <%= translation.vor5Desc %>
+                                    </h3>
+                                    <p class="custom-p-small">
+                                        <%= translation.vor5Text %>
                                     </p>
                                 </div>
                             </div>
@@ -172,13 +187,15 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 mx-auto text-center mt-5">
-                                <p class="custom-p-small mt-5">ÜBER MICH
+                                <p class="custom-p-small mt-5 caps">
+                                    <%= translation.about %>
                                 </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mx-auto text-center mt-5 animated-text">
-                                <h2 class="custom-h2 mb-1">Über Designstudio von Oksana Kuhn
+                                <h2 class="custom-h2 mb-1">
+                                    <%= translation.aboutTitle %>
                                 </h2>
                             </div>
                         </div>
@@ -194,20 +211,21 @@
                                 </div>
                             </div>
                             <div class="col-11 col-md-7 col-lg-4 mx-auto mt-5 text-center text-lg-start">
-                                <h3>HALLO! <br> ICH HEIẞE OKSANA</h2>
-                                    <p class="custom-p-small">Ich bin froh, dass ich die Möglichkeit habe, in dem
-                                        kleinen Städtchen Bad Driburg in dem Bundesland NRW zu sein.</p>
-                                    <p class="custom-p-small">Mehr als 10 Jahre arbeite ich als Modedesignerin und
-                                        erschaffe Behaglichkeit mit Hilfe der kreativen Textilien verschiedener
-                                        Schwierigkeitsgrade.</p>
-                                    <a class="custom-p link-dark link-underline link-underline-opacity-0 elliptical-link custom-underline me-2"
-                                        href="/myself">MEHR
+                                <h3 class="caps">
+                                    <%- translation.aboutGreetings %>
+                                        </h2>
+                                        <p class="custom-p-small"><%- translation.aboutText %></p>
+                                        <a class="custom-p link-dark link-underline link-underline-opacity-0 elliptical-link custom-underline me-2 caps"
+                                            href="/myself">
+                                            <%= translation.mehr %>
+                                        </a>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 52 40"
                                             fill="none">
                                             <path
                                                 d="M2.38498e-07 20L52 20M52 20C34.6667 20 32.1905 12.5 32.1905 3.83868e-07M52 20C34.6667 20 32.1905 27.5 32.1905 40"
                                                 stroke="#2C2C2C"></path>
-                                        </svg></a>
+                                        </svg>
+
                             </div>
                         </div>
                     </div>
@@ -215,31 +233,33 @@
                         <div class="row">
                             <div class="col-md-12 mx-auto text-center">
                                 <h2 class="custom-h2">
-                                    Hohe Qualität des Stoffes <span class="img-placeholder"
-                                        data-src="img/cloth.png"></span>
-                                    kombiniere
+                                    <%= translation.aboutBottom1 %> <span class="img-placeholder"
+                                            data-src="img/cloth.png"></span>
+                                        <%= translation.aboutBottom2 %>
                                 </h2>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 mx-auto text-center">
                                 <h2 class="custom-h2">
-                                    ich mit dem trendigen Design, der tadellosen
+                                    <%= translation.aboutBottom3 %>
                                 </h2>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 mx-auto text-center">
                                 <h2 class="custom-h2">
-                                    Anfertigung und <span class="img-placeholder" data-src="img/cloth-2.png"></span>dem
-                                    kundenorientierten
+                                    <%= translation.aboutBottom4 %> <span class="img-placeholder"
+                                            data-src="img/cloth-2.png"></span>dem
+                                        <%= translation.aboutBottom5 %>
                                 </h2>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 mx-auto text-center">
                                 <h2 class="custom-h2">
-                                    Service <span class="img-placeholder" data-src="img/cloth-3.png"></span>
+                                    <%= translation.aboutBottom6 %> <span class="img-placeholder"
+                                            data-src="img/cloth-3.png"></span>
                                 </h2>
                             </div>
                         </div>

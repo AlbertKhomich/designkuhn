@@ -2,12 +2,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto text-center mt-5">
-                <p class="custom-p-small mt-5">BEWERTUNGEN</p>
+                <p class="custom-p-small mt-5 caps">
+                    <%= translation.bewertungen %>
+                </p>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6 mx-auto text-center mt-5">
-                <h2 class="custom-h2 mb-5 animated-text">Das sagen meine Kunden über mich
+                <h2 class="custom-h2 mb-5 animated-text">
+                    <%= translation.bewertungenTitle %>
                 </h2>
             </div>
         </div>
@@ -72,8 +75,7 @@
                                         <div class="ellipse ellipse-second"></div>
                                         <div class="ellipse ellipse-btn" id="feedbackEllipse"></div>
                                         <a href="#" id="feedbackGive" class="custom-p elliptical-link"
-                                            data-bs-toggle="modal" data-bs-target="#feedbackModal"><b>Feedback
-                                                geben</b></a>
+                                            data-bs-toggle="modal" data-bs-target="#feedbackModal"><b>Feedback</b></a>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +105,9 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="feedbackModalLabel">Hinterlassen Sie Ihr Feedback</h3><br>
+                    <h3 class="modal-title" id="feedbackModalLabel">
+                        <%= translation.modalFeedbackTitle %>
+                    </h3><br>
                     <button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M19.4115 0.623047L0.730469 19.3042" stroke="#1C1C1C" stroke-width="0.5"
@@ -117,16 +121,18 @@
                     <!-- Form inside the modal -->
                     <div id="errorFeedback"></div>
                     <form class="custom-form-feedback" id="feedbackForm">
-                        <p class="custom-p-small">Das ist wichtig für meine Kultivierung</p><br>
+                        <p class="custom-p-small">
+                            <%= translation.modalFeedbackSubTitle %>
+                        </p><br>
                         <div class="form-group mb-3">
                             <label class="form-label custom-p-small custom-bold" for="feedbackName">Name
                                 <span class="text-danger">*</span></label>
                             <input type="text" class="form-control custom-input" id="feedbackName" name="feedbackName">
                         </div>
                         <div class="form-group mb-3">
-                            <label class="form-label custom-p-small custom-bold" for="feedbackLink">Link
-                                zu Ihrem Profil
-                                in sozialen Netzwerken</label>
+                            <label class="form-label custom-p-small custom-bold" for="feedbackLink">
+                                <%= translation.modalFeedbackLink %>
+                            </label>
                             <input type="text" class="form-control custom-input" id="feedbackLink" name="feedbackLink">
                         </div>
                         <div class="form-group mb-3">
@@ -143,7 +149,7 @@
                         id="submitFormFeedback">
                         <span class="spinner-border spinner-border-sm d-none" id="spinnerFeedback"
                             aria-hidden="true"></span>
-                        Senden
+                        <%= translation.modalFeedbackSubmit %>
                     </button>
                 </div>
             </div>

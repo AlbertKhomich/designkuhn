@@ -25,12 +25,14 @@ const maxLength = feedbackMessage
   ? parseInt(feedbackMessage.getAttribute("maxlength"))
   : null;
 
-btnContact.addEventListener("click", (event) => {
-  event.preventDefault();
-});
+const submitContactForm = async () => {
+  contactForm.querySelectorAll(".alert").forEach((alertDiv) => {
+    alertDiv.parentNode.removeChild(alertDiv);
+  });
 
-linkContact.addEventListener("click", async function (event) {
-  event.preventDefault();
+  contactForm.querySelectorAll("input, textarea").forEach((input) => {
+    input.style.borderColor = "black";
+  });
 
   spinnerContact.classList.remove("d-none");
   ellipseContactSend.classList.add("d-none");
@@ -54,16 +56,24 @@ linkContact.addEventListener("click", async function (event) {
     const data = await response.json();
 
     if (data.errors) {
-      const errorMessages = data.errors
-        .map((error) => `<p>${error.msg}</p>`)
-        .join("");
-      alertContact.innerHTML = `<div class="alert alert-danger" role="alert">${errorMessages}</div>`;
+      data.errors.forEach((err) => {
+        const currInput = document.getElementById(err.path);
+        currInput.insertAdjacentHTML(
+          "beforebegin",
+          `<div class="alert alert-danger" role="alert">${err.msg}</div>`
+        );
+        currInput.style.borderColor = "red";
+      });
+      // const errorMessages = data.errors
+      //   .map((error) => `<p>${error.msg}</p>`)
+      //   .join("");
+      // alertContact.innerHTML = `<div class="alert alert-danger" role="alert">${errorMessages}</div>`;
     } else {
       inputName.value = "";
       inputEmail.value = "";
       inputTel.value = "";
       inputKomm.value = "";
-      alertContact.innerHTML = `<div class="alert alert-success" role="alert">Email wurde erfolgreich Versendet.</div>`;
+      alertContact.innerHTML = `<div class="alert alert-success" role="alert">${data.msg}</div>`;
     }
   } catch (error) {
     console.error("Error:", error);
@@ -71,19 +81,39 @@ linkContact.addEventListener("click", async function (event) {
     spinnerContact.classList.add("d-none");
     ellipseContactSend.classList.remove("d-none");
   }
+};
+
+btnContact.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  submitContactForm();
+});
+
+linkContact.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  submitContactForm();
 });
 
 if (btnFeedback) {
   btnFeedback.addEventListener("click", async function (e) {
     e.preventDefault();
 
+    feedbackForm.querySelectorAll(".alert").forEach((alertDiv) => {
+      alertDiv.parentNode.removeChild(alertDiv);
+    });
+
+    feedbackForm.querySelectorAll("input, textarea").forEach((input) => {
+      input.style.borderColor = "black";
+    });
+
     btnFeedback.disabled = true;
     spinnerBtnFeedback.classList.remove("d-none");
 
     const formData = {
-      inputNameFeedback: feedbackName.value,
-      inputLinkFeedback: feedbackLink.value,
-      inputFeedback: feedbackMessage.value,
+      feedbackName: feedbackName.value,
+      feedbackLink: feedbackLink.value,
+      feedbackMessage: feedbackMessage.value,
     };
 
     try {
@@ -98,15 +128,19 @@ if (btnFeedback) {
       const data = await response.json();
 
       if (data.errorsFeedback) {
-        const errorMessages = data.errorsFeedback
-          .map((error) => `<p>${error.msg}</p>`)
-          .join("");
-        errorFeedback.innerHTML = `<div class="alert alert-danger" role="alert">${errorMessages}</div>`;
+        data.errorsFeedback.forEach((err) => {
+          const currInput = document.getElementById(err.path);
+          currInput.insertAdjacentHTML(
+            "beforebegin",
+            `<div class="alert alert-danger" role="alert">${err.msg}</div>`
+          );
+          currInput.style.borderColor = "red";
+        });
       } else {
         feedbackName.value = "";
         feedbackLink.value = "";
         feedbackMessage.value = "";
-        errorFeedback.innerHTML = `<div class="alert alert-success" role="alert">Feedback wurde erfolgreich Versendet.</div>`;
+        errorFeedback.innerHTML = `<div class="alert alert-success" role="alert">${data.msg}</div>`;
       }
     } catch (error) {
       console.error("Error:", error);

@@ -7,7 +7,9 @@
         </div>
         <div class="row">
             <div class="col-md-4 mx-auto text-center">
-                <h2 class="custom-h2 mb-5 mt-5 animated-text">Angefertigte Bestellungen</h2>
+                <h2 class="custom-h2 mb-5 mt-5 animated-text">
+                    <%= translation.completeOrders %>
+                </h2>
             </div>
         </div>
     </div>
@@ -38,13 +40,13 @@
                     loading="lazy">
             </div>
             <div class="col-12 col-md-6 col-lg-3 order-2 order-lg-3 align-self-center text-center custom-ps mt-5">
-                <a class="custom-p-small link-dark link-underline link-underline-opacity-0 elliptical-link me-2 custom-underline"
-                    href="/heimtextilien" style="text-transform: uppercase   ;">Textilien für Ihr Haus</a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 52 40" fill="none">
+                <a class="custom-p-small link-dark link-underline link-underline-opacity-0 elliptical-link me-2 custom-underline caps"
+                    href="/heimtextilien""><%= translation.portfolioLink %></a>
+                <svg xmlns=" http://www.w3.org/2000/svg" width="25" viewBox="0 0 52 40" fill="none">
                     <path
                         d="M2.38498e-07 20L52 20M52 20C34.6667 20 32.1905 12.5 32.1905 3.83868e-07M52 20C34.6667 20 32.1905 27.5 32.1905 40"
                         stroke="#2C2C2C"></path>
-                </svg>
+                    </svg>
             </div>
             <div
                 class="col-12 col-md-6 col-lg-3 order-lg-4 align-self-end text-start text-lg-end mb-5 mb-md-0 parallax-portfolio-container">
@@ -56,8 +58,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 mx-auto text-center mt-5">
-                <h2 class="custom-h2 mb-5 animated-text">Die gute Wahl ist Stützen des Erfolgs, deshalb werde ich Ihnen
-                    mit Vergnügen helfen!</h2>
+                <h2 class="custom-h2 mb-5 animated-text">
+                    <%= translation.portfolioContact %>
+                </h2>
             </div>
         </div>
     </div>
@@ -67,13 +70,14 @@
                 <div class="elliptical-link-container">
                     <div class="ellipse ellipse-second"></div>
                     <div class="ellipse ellipse-btn"></div>
-                    <a class="custom-p elliptical-link" href="#contact"><b>Anmeldung für<br>die Beratung</b></a>
+                    <a class="custom-p elliptical-link" href="#contact"><b><%- translation.buttonText %></b></a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 mx-auto text-center mt-5">
-                <p class="custom-p-small">Auf erste Bestellung 5% Rabatt</p>
+                <p class="custom-p-small"><%- translation.rabbat %>
+                </p>
             </div>
         </div>
     </div>
