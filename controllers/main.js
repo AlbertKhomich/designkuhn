@@ -19,16 +19,11 @@ exports.getIndex = (req, res, next) => {
 exports.getHoreca = (req, res, next) => {
   res.render("horeca", {
     coverTopic: req.i18n_texts.horecaTopic,
-    pageTitle: "Uniformdesign. Uniform, Tischdecken, Sets-, Vorhängenäherei",
     leftBlock: false,
     rightBlock: false,
     buttonCover: true,
     discount: false,
     coverImage: "img/horeca.png",
-    jobServ: "Was mache ich",
-    firstServ: "TISCHDECKEN-, SETS-,<br>VORHÄNGENÄHEREI",
-    secondServ: "UNIFORMDESIGN",
-    thirdServ: "ERARBEITUNG <br>UND NÄHEREI VON <br>STUHLÜBERWÜRFEN",
     isMehr: false,
     sectionTitleContact: true,
     portfolio: true,
@@ -38,21 +33,12 @@ exports.getHoreca = (req, res, next) => {
 exports.getKleideranfertigung = (req, res, next) => {
   res.render("kleideranfertigung", {
     coverTopic: req.i18n_texts.kleiderTopic,
-    pageTitle:
-      "Maßschneiderei in Bad Driburg [Vorhandene Stoffe ] [RABATT auf erste Bestellung]",
     leftBlock: true,
     rightBlock: true,
     buttonCover: true,
-    buttonText: "Anmeldung für<br>die Beratung",
     discount: true,
     coverImage: "img/kleideranfertigung.png",
-    jobServ: "Was mache ich",
-    firstServ: "KLEIDERANFERTIGUNG<br> NACH MAS",
-    secondServ: "KLEIDERAUSBESSERUNG",
-    thirdServ: "KLEIDERERNEUERUNG",
     isMehr: true,
-    mehrText:
-      "Ich begleite und berate die Braut rund um das Hochzeitskleid, nähe auch Brautkleider, Brautschleier und vieles mehr.",
     sectionTitleContact: true,
     portfolio: true,
   });
@@ -61,20 +47,12 @@ exports.getKleideranfertigung = (req, res, next) => {
 exports.getHeimtextilien = (req, res, next) => {
   res.render("heimtextilien", {
     coverTopic: req.i18n_texts.heimTopic,
-    pageTitle:
-      "Design und Nähen von Vorhänge, das Interieur Dekoration auf Bestellung",
     leftBlock: true,
     rightBlock: true,
     buttonCover: true,
-    buttonText: "Anmeldung für<br>die Beratung",
     discount: true,
     coverImage: "img/heimtextilien.png",
-    jobServ: "Ich designe und style für Sie",
-    firstServ: "BETTWÄSCHE",
-    secondServ: "VORHÄNGE",
-    thirdServ: "KOPFKISSEN <br>UND TAGESDECKEN",
     isMehr: true,
-    mehrText: "Außerdem nähe ich Tischdecken, Kopfrollen und vieles mehr",
     sectionTitleContact: true,
     portfolio: true,
   });
@@ -83,9 +61,6 @@ exports.getHeimtextilien = (req, res, next) => {
 exports.getMyself = (req, res, next) => {
   res.render("myself", {
     coverTopic: req.i18n_texts.aboutTopic,
-    pageTitle:
-      "Über mich | Oksana Kuhn — professioneller Modedesignerin mit 10 Jahren Erfahrung",
-    coverTitle: "Über mich",
     leftBlock: false,
     rightBlock: false,
     buttonCover: false,
@@ -98,8 +73,7 @@ exports.getMyself = (req, res, next) => {
 
 exports.getKontakte = (req, res, next) => {
   res.render("kontakte", {
-    pageTitle:
-      "Kontaktinformationen | Designstudio und Atelier von Oksana Kuhn",
+    coverTopic: req.i18n_texts.contactTopic,
     sectionTitleContact: false,
     portfolio: false,
   });

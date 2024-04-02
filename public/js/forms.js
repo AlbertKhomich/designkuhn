@@ -92,6 +92,7 @@ btnContact.addEventListener("click", (event) => {
 linkContact.addEventListener("click", function (event) {
   event.preventDefault();
 
+  window.location.href = "#contact-form";
   submitContactForm();
 });
 

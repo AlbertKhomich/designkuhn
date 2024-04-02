@@ -96,7 +96,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ellipseBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      window.location.href = "#contact";
+
+      ellipseBtn.id === "submitFormBtn"
+        ? (window.location.href = "#contact-form")
+        : (window.location.href = "#contact");
     });
 
     ellipseLink.addEventListener("mouseover", function () {

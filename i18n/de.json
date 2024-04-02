@@ -1,10 +1,9 @@
 {
-  "horeca": "horeca",
   "kleideranfertigung": "Kleideranfertigung",
   "kleidung": "Kleidung",
   "heimtextilien": "Heimtextilien",
   "portfolio": "Portfolio",
-  "about": "über mich",
+  "about": "Über mich",
   "aboutTitle": "Über Designstudio von Oksana Kuhn",
   "aboutGreetings": "HALLO!<br>ICH HEIẞE OKSANA",
   "aboutText": "Ich bin froh, dass ich die Möglichkeit habe, in dem kleinen Städtchen Bad Driburg in dem Bundesland NRW zu sein.<br><br>Mehr als 10 Jahre arbeite ich als Modedesignerin und erschaffe Behaglichkeit mit Hilfe der kreativen Textilien verschiedener Schwierigkeitsgrade.",
@@ -14,32 +13,68 @@
   "aboutBottom4": "Anfertigung und",
   "aboutBottom5": "kundenorientierten",
   "aboutBottom6": "Service",
-  "kontakte": "kontakte",
-  "pageTitle": "Designstudio und Atelier von Oksana Kuhn | Kleideranfertigung | Atelier | Design",
+  "kontakte": "Kontakte",
   "main": {
+    "pageTitle": "Designstudio und Atelier von Oksana Kuhn | Kleideranfertigung | Atelier | Design",
     "coverTitle": "Designstudio und Atelier von Oksana Kuhn",
     "leftText": "Ich designe Kleiderstücke und Textilien für das Haus. Dekoriere Ihr Zuhause.",
     "rightText": "Erarbeite einzigartiges Style, das Ihre Individualität unterstreicht."
   },
   "horecaTopic": {
+    "pageTitle": "Uniformdesign. Uniform, Tischdecken, Sets-, Vorhängenäherei",
     "coverTitle": "HoReCa",
     "leftText": "",
-    "rightText": ""
+    "rightText": "",
+    "jobServ": "Was mache ich",
+    "firstServ": "TISCHDECKEN-, SETS-,<br>VORHÄNGENÄHEREI",
+    "secondServ": "UNIFORMDESIGN",
+    "thirdServ": "ERARBEITUNG <br>UND NÄHEREI VON <br>STUHLÜBERWÜRFEN",
+    "vorTitle": "Warum lohnt es, sich an mich zu wenden?",
+    "vor1Title": "ICH BIN AUFMERKSAM <br> ZU JEDEM MITARBEITER",
+    "vor1Desc": "Ich nehme die Maße individuell von jedem Mitarbeiter und achte auf die Körpergegebenheiten und Wünsche von jedem einzelnen. Als Ergebnis bekommen Sie ein figurbetontes und perfekt sitzendes Kleiderstück.",
+    "vor2Title": "ICH UNTERSTREICHE <br>IHRE INDIVIDUALITÄT",
+    "vor2Desc": "Ich erarbeite das individuelle Design von den Textilien und der Uniform, das stilistisch zu Ihrem Unternehmen und harmonisch zu Ihrem Interieur passt.",
+    "vor3Title": "ICH ARBEITE NUR MIT <br> DEN HOCHQUALITATIVEN <br> STOFFEN",
+    "vor3Desc": "Ich nähe Uniformen aus Naturstoffen. Ihre Mitarbeiter werden mit Vergnügen und Komfort in dieser Kleidung arbeiten. Ich nutze auch Spezialstoffe, die pflegeleicht sind.",
+    "vor4Title": "MEIN EIGENES <br>DESIGNSTUDIO",
+    "vor4Desc": "Alle Bestellungen werden individuell in meinem Atelier fertiggestellt. Ich bin persönlich für die Qualität des Nähens und die Schnittschablone verantwortlich.",
+    "vor5Title": "KUNDENSERVICE ONLINE",
+    "vor5Desc": "Ich kann den Stoff per Foto für Ihre Bestellung aussuchen und den Kostenvoranschlag machen. So sparen wir Ihre Zeit."
   },
   "kleiderTopic": {
+    "pageTitle": "Maßschneiderei in Bad Driburg [Vorhandene Stoffe ] [RABATT auf erste Bestellung]",
     "coverTitle": "Kleideranfertigung",
-    "leftText": "Ich designe individuelle Kleiderstücke, die Ihre Figur betonnen",
-    "rightText": "Ich erarbeite Schnittschablonen nach Ihren Maßen"
+    "leftText": "Ich designe individuelle Kleidungsstücke, die Ihre Figur betonen",
+    "rightText": "Ich erarbeite Schnittschablonen nach Ihren Maßen",
+    "jobServ": "Was mache ich",
+    "firstServ": "KLEIDERANFERTIGUNG<br> NACH MAS",
+    "secondServ": "KLEIDERAUSBESSERUNG",
+    "thirdServ": "KLEIDERERNEUERUNG",
+    "mehrText": "Ich begleite und berate die Braut rund um das Hochzeitskleid, nähe auch Brautkleider, Brautschleier und vieles mehr."
   },
   "heimTopic": {
+    "pageTitle": "Design und Nähen von Vorhänge, das Interieur Dekoration auf Bestellung",
     "coverTitle": "Textilien für Ihr Haus und Dekoration",
     "leftText": "Ich style Vorhänge, die perfekt zur Zimmerausstattung passen",
-    "rightText": "Ich erarbeite Tagesdecken, Dekokissen und Bettwäsche"
+    "rightText": "Ich erarbeite Tagesdecken, Dekokissen und Bettwäsche",
+    "jobServ": "Ich designe und style für Sie",
+    "firstServ": "BETTWÄSCHE",
+    "secondServ": "VORHÄNGE",
+    "thirdServ": "KOPFKISSEN <br>UND TAGESDECKEN",
+    "mehrText": "Außerdem nähe ich Tischdecken, Kopfrollen und vieles mehr"
   },
   "aboutTopic": {
+    "pageTitle": "Über mich | Oksana Kuhn — professioneller Modedesignerin mit 10 Jahren Erfahrung",
     "coverTitle": "Über mich",
     "leftText": "",
-    "rightText": ""
+    "rightText": "",
+    "title": "Mehrere Menschen zustimmen, dass Erfolg ohne Glück und Vergnügen unmöglich ist",
+    "text1": "<p class='custom-p-big'>Denken Sie an die wichtigen Sachen, bei deren Erledigung Sie Ihren Spaß haben. Was begeistert Sie? Womit möchten Sie sich jeden Tag beschäftigen? </p> <p class='custom-p-big'>Leute kommen in Leben sehr selten voran, wenn Sie kein Gefallen an Ihrer Beschäftigung finden. Machen Sie nur das, was Ihr Herz begehrt. Wählen Sie das aus, was Sie reizt!</p> <p class='custom-p-big'>Während der Arbeit mit meinen Kunden habe ich meine Devise erschaffen “schaffe das, was dich inspiriert“. Jetzt erzähle ich Ihnen, was mich inspiriert und was ich erschaffe.</p>",
+    "text2": "<p class='custom-p-big'>Begeisterung für mich ist solche Beschäftigung, die dich glücklich macht und den Anderen Freude bereitet. </p> <p class='custom-p-big'>Ich freue mich, die Möglichkeit zu haben, in der kleinen Stadt Bad Driburg in Nordrhein-Westfalen zu sein.</p> <p class='custom-p-big'>Mehr als 10 Jahre beschäftige ich mich mit dem Design und der Anfertigung von Kleidern und Textilien. </p>",
+    "text3": "<p class='custom-p-big'>Ich arbeite mit den aktuellsten Stoffen der Hersteller aus Italien, Frankreich, Deutschland und mit weltberühmten Marken der Textilienhersteller. </p> <p class='custom-p-big'>Dank erworbenen Kenntnissen während meines Studiums an der Kiewer Universität für Design setze ich in die Tat viele Projekte verschiedener Schwierigkeitsgrade um. </p> <p class='custom-p-big'>Ich erwarte Sie mit Freude in meinem eigenen Designstudio, um Sie fachlich zu beraten.</p>"
+  },
+  "contactTopic": {
+    "pageTitle": "Kontaktinformationen | Designstudio und Atelier von Oksana Kuhn"
   },
   "buttonText": "Anmeldung für<br>die Beratung",
   "rabbat": "Auf erste Bestellung 5% Rabatt",
