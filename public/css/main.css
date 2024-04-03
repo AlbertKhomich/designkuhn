@@ -273,8 +273,8 @@ body.loaded .navbar::after {
 }
 
 .rotate-15 {
-    transform: rotate(3deg);
-    transition: transform 0.3s ease;
+    transform: rotate(5deg);
+    /* transition: transform 0.3s ease; */
 }
 
 .parallax-portfolio-container {
@@ -458,7 +458,13 @@ body.loaded .navbar::after {
 }
 
 .img-fluid-big {
-    width: 75%;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .img-fluid-big {
+        width: 75%;
+    }
 }
 
 .animated-title {

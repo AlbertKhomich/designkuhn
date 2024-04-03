@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const distance = imageMiddleY - windowMiddleY;
 
-      let rotationAngle = (distance / windowHeight) * 15;
+      let rotationAngle = (distance / windowHeight) * 15 + 5;
 
       rotationAngle = Math.max(-15, Math.min(15, rotationAngle));
 

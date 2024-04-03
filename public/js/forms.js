@@ -64,10 +64,6 @@ const submitContactForm = async () => {
         );
         currInput.style.borderColor = "red";
       });
-      // const errorMessages = data.errors
-      //   .map((error) => `<p>${error.msg}</p>`)
-      //   .join("");
-      // alertContact.innerHTML = `<div class="alert alert-danger" role="alert">${errorMessages}</div>`;
     } else {
       inputName.value = "";
       inputEmail.value = "";
