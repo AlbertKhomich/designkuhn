@@ -14,6 +14,10 @@
   "aboutBottom5": "approach to each",
   "aboutBottom6": "order",
   "kontakte": "Contacts",
+  "error": {
+    "pageTitle": "Error",
+    "404": "Not Found"
+  },
   "main": {
     "pageTitle": "Oksana Kuhn Design Studio | Sewing | Atelier | Textile [DISCOUNT for the first order]",
     "coverTitle": "Oksana Kuhn design studio with own atelier",
@@ -127,6 +131,7 @@
     "wrongTel": "Wrong Number",
     "noFeedback": "Feedback is required",
     "success": "Feedback was sent successfully.",
-    "successContact": "Email was sent successfully."
+    "successContact": "Email was sent successfully.",
+    "feedbackFail": "Failed to send feedback."
   }
 }

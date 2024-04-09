@@ -69,7 +69,9 @@ const submitContactForm = async () => {
       inputEmail.value = "";
       inputTel.value = "";
       inputKomm.value = "";
-      alertContact.innerHTML = `<div class="alert alert-success" role="alert">${data.msg}</div>`;
+      alertContact.innerHTML = data.success
+        ? `<div class="alert alert-success" role="alert">${data.msg}</div>`
+        : `<div class="alert alert-danger" role="alert">${data.msg}</div>`;
     }
   } catch (error) {
     console.error("Error:", error);
@@ -137,7 +139,9 @@ if (btnFeedback) {
         feedbackName.value = "";
         feedbackLink.value = "";
         feedbackMessage.value = "";
-        errorFeedback.innerHTML = `<div class="alert alert-success" role="alert">${data.msg}</div>`;
+        errorFeedback.innerHTML = data.success
+          ? `<div class="alert alert-success" role="alert">${data.msg}</div>`
+          : `<div class="alert alert-danger" role="alert">${data.msg}</div>`;
       }
     } catch (error) {
       console.error("Error:", error);

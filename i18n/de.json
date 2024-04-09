@@ -14,6 +14,10 @@
   "aboutBottom5": "dem kundenorientierten",
   "aboutBottom6": "Service",
   "kontakte": "Kontakte",
+  "error": {
+    "pageTitle": "Fehler",
+    "404": "Nicht Gefunden"
+  },
   "main": {
     "pageTitle": "Designstudio und Atelier von Oksana Kuhn | Kleideranfertigung | Atelier | Design",
     "coverTitle": "Designstudio und Atelier von Oksana Kuhn",
@@ -127,6 +131,7 @@
     "wrongTel": "Ungültige Nummer",
     "noFeedback": "Feedback ist erforderlich",
     "success": "Feedback wurde erfolgreich Versendet.",
-    "successContact": "Email wurde erfolgreich Versendet."
+    "successContact": "Email wurde erfolgreich Versendet.",
+    "feedbackFail": "Feedback konnte nicht gesendet werden."
   }
 }
