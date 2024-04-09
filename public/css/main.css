@@ -344,6 +344,7 @@ body.loaded .navbar::after {
     width: 420px;
     height: 180px;
     z-index: 2;
+    transition: width 1s ease-in-out, height 1s ease-in-out;
 }
 
 .ellipse-second {

@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(handleIntersect, options);
 
   rotatingImages.forEach((img) => {
+    transformImage(img);
     observer.observe(img);
   });
 
@@ -45,21 +46,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function calcRotationAngle(image) {
+    const windowHeight = window.innerHeight;
+    const windowMiddleY = windowHeight / 2;
+
+    const rect = image.getBoundingClientRect();
+    const imageMiddleY = rect.top + rect.height / 2;
+
+    const distance = imageMiddleY - windowMiddleY;
+
+    let rotationAngle = (distance / windowHeight) * 15 + 5;
+
+    return Math.max(-15, Math.min(15, rotationAngle));
+  }
+
+  function transformImage(img) {
+    img.style.transform = `rotate(${calcRotationAngle(img)}deg)`;
+  }
+
   function rotateImage(image) {
     window.addEventListener("scroll", function () {
-      const windowHeight = window.innerHeight;
-      const windowMiddleY = windowHeight / 2;
-
-      const rect = image.getBoundingClientRect();
-      const imageMiddleY = rect.top + rect.height / 2;
-
-      const distance = imageMiddleY - windowMiddleY;
-
-      let rotationAngle = (distance / windowHeight) * 15 + 5;
-
-      rotationAngle = Math.max(-15, Math.min(15, rotationAngle));
-
-      image.style.transform = `rotate(${rotationAngle}deg)`;
+      transformImage(image);
     });
   }
 
