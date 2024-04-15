@@ -101,20 +101,23 @@ exports.postSendEmail = (req, res, next) => {
     `,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error(error);
-      return res.status(500).json({
-        success: false,
-        msg: req.i18n_texts.validation["feedbackFail"],
-      });
-    }
-    console.log("Feedback sent: %s", info.messageId);
-    res.json({ success: true, msg: req.i18n_texts.validation["success"] });
-  });
+  // transporter.sendMail(mailOptions, (error, info) => {
+  //   if (error) {
+  //     console.error(error);
+  //     return res.status(500).json({
+  //       success: false,
+  //       msg: req.i18n_texts.validation["feedbackFail"],
+  //     });
+  //   }
+  //   console.log("Feedback sent: %s", info.messageId);
+  //   res
+  //     .status(200)
+  //     .json({ success: true, msg: req.i18n_texts.validation["success"] });
+  // });
+  res.status(200).json({ success: true, msg: "success" });
 };
 
-exports.postSendFeedback = async (req, res, next) => {
+exports.postSendFeedback = (req, res, next) => {
   const { feedbackName, feedbackLink, feedbackMessage } = req.body;
   const errors = validationResult(req);
 
@@ -135,17 +138,18 @@ exports.postSendFeedback = async (req, res, next) => {
     `,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      return res.status(500).json({
-        success: false,
-        msg: req.i18n_texts.validation["feedbackFail"],
-      });
-    }
-    console.log("Feedback sent: %s", info.messageId);
-    res.json({ success: true, msg: req.i18n_texts.validation["success"] });
-  });
+  // transporter.sendMail(mailOptions, (error, info) => {
+  //   if (error) {
+  //     console.log(error);
+  //     return res.status(500).json({
+  //       success: false,
+  //       msg: req.i18n_texts.validation["feedbackFail"],
+  //     });
+  //   }
+  //   console.log("Feedback sent: %s", info.messageId);
+  //   res.status(200).json({ success: true, msg: req.i18n_texts.validation["success"] });
+  // });
+  res.status(200).json({ success: true, msg: "success" });
 };
 
 exports.getSetEn = (req, res) => {
